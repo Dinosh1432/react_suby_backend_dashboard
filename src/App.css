@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans", sans-serif;
+    background-color: #F9FAFB; /* Soft light gray */
+}
+
+.navSection {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1E3A8A; /* Deep blue */
+    color: #FFFFFF;
+    font-size: large;
+    padding: 0 20px;
+    /* Light blue */
+}
+
+.sideBarSection {
+    width: 100%;
+    max-width: 15%;
+    height: 91vh;
+    padding-top: 10px;
+    background-color: #111827; /* Very dark blue-gray */
+    color: #E5E7EB; /* Light gray */
+}
+
+.sideBarSection ul li {
+    list-style: none;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: medium;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sideBarSection ul li:hover {
+    color: #60A5FA; /* Hover: Sky Blue */
+}
+
+.loginSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.collectionSection {
+    display: flex;
+}
+
+.authForm {
+    width: 100%;
+    max-width: 50%;
+    margin-top: -230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid #D1D5DB; /* Gray-300 */
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    padding: 20px;
+}
+
+.authForm input {
+    width: 100%;
+    max-width: 55%;
+    height: 1.4rem;
+}
+
+.registerSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.authForm label {
+    width: 100%;
+    max-width: 55%;
+    font-weight: 800;
+}
+
+/* firm section Add firm */
+.firmSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.tableForm {
+    width: 100%;
+    max-width: 50%;
+    margin-top: -100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid #D1D5DB;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    padding: 20px;
+}
+
+.tableForm input {
+    width: 100%;
+    max-width: 85%;
+    height: 35px;
+    margin: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #9CA3AF;
+    border-radius: 5px;
+}
+
+.tableForm label {
+    width: 100%;
+    max-width: 85%;
+    font-weight: 600;
+}
+
+/* checkbox styling */
+.check-inp {
+    width: 100%;
+    max-width: 85%;
+    display: flex;
+}
+
+.inputsContainer {
+    width: 100%;
+    max-width: 90%;
+    display: flex;
+}
+
+.checkboxContainer {
+    width: 100%;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.check-inp label {
+    width: 20%;
+}
+
+.checkboxContainer label {
+    width: 100%;
+}
+
+.checkboxContainer input {
+    margin-left: -180px;
+}
+
+.regBoxContainer {
+    font-size: medium;
+}
+
+/* products table */
+.product-table {
+    border: 2px solid #1F2937; /* Dark gray */
+    width: 80vw;
+    max-width: 80vw;
+    border-collapse: collapse;
+    margin-top: 5px;
+    margin-left: 30px;
+    background-color: #FFFFFF;
+}
+
+.product-table th,
+.product-table td {
+    border: 1px solid #9CA3AF; /* Mid-gray */
+    padding: 8px;
+}
+
+.product-table th {
+    height: 50px;
+    text-align: left;
+    background-color: #E5E7EB; /* Light gray */
+    color: #111827;
+}
+
+/* page not found */
+.page-Error {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    background-color: #F3F4F6;
+    color: #DC2626; /* Red */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.authForm,
+.tableForm,
+.firmSection,
+.registerSection {
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes slideInLeft {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+.sideBarSection {
+  animation: slideInLeft 0.5s ease-out;
+}
+
+@keyframes dropDown {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.navSection {
+  animation: dropDown 0.5s ease-in-out;
+}
+.sideBarSection ul li {
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.sideBarSection ul li:hover {
+  color: #60A5FA;
+  transform: translateX(5px);
+}
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+button {
+  animation: pulse 2s infinite ease-in-out;
+  transition: background-color 0.3s ease;
+}
